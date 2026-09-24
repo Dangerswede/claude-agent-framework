@@ -18,7 +18,16 @@ The main Claude session acts primarily as a coordinator: understand intent, disc
 
 `orchestrator`, `project-analyzer`, `agent-designer`, `planner`, `researcher`, `implementer`, `tester`, `reviewer`.
 
-See `docs/architecture.md` and `framework/protocols/`.
+## Repository layout
+
+- `framework/` — framework-owned runtime payload.
+- `templates/` — project-owned files created during bootstrap/discovery.
+- `docs/` — architecture, lifecycle, caching, model, and bootstrap decisions.
+- `CLAUDE.md` — instructions for developing this framework itself, not a file to copy blindly into consuming projects.
+
+## Bootstrap
+
+Start with `docs/bootstrap.md`. v0.1 intentionally uses a documented, non-destructive bootstrap rather than an installer that might overwrite an existing project's Claude configuration. Automation can be added after this ownership contract has been integration-tested.
 
 ## Model policy
 
